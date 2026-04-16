@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth } from '../config/firebase.jsx';
+import { auth } from '../config/firebase.js';
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword
@@ -10,7 +10,7 @@ import KeyIcon from '@mui/icons-material/Key';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import Logo from '../assets/logo.png'
 import GoogleIcon from '@mui/icons-material/Google';
-import { CheckBox } from '@mui/icons-material';
+
 
 
 
@@ -74,7 +74,7 @@ export default function Auth() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <KeyIcon fontSize='medium' className='key' />
-        <br></br>
+       <br />
         <div className="remember">
           <input className='check'
             type="checkbox"
@@ -82,7 +82,7 @@ export default function Auth() {
             checked={remember}
             onChange={(e) => setRemember(e.target.checked)}
           />
-          <label>Remember me</label>
+         <label htmlFor="remember">Remember me</label>
         
         <button className="login-btn" id = "google-btn" onClick={signInWithGoogle}>
           <img className='google'
